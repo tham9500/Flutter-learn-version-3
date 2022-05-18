@@ -49,9 +49,9 @@ class _Function_dartState extends State<Function_dart> {
           Count_btn();
           // Add your onPressed code here!
         },
-        label: const Text('Approve'),
-        icon: const Icon(Icons.thumb_up),
-        backgroundColor: Colors.pink,
+        label: const Text('plus'),
+        icon: const Icon(Icons.add),
+        backgroundColor: Colors.yellow.shade900,
       ),
     );
   }
@@ -67,7 +67,10 @@ class _Function_dartState extends State<Function_dart> {
 
   Widget Number_count() {
     return Container(
-      child: Text("${number}", style: TextStyle(fontSize: 24)),
+      child: Text(
+        "${number}",
+        style: TextStyle(fontSize: 24),
+      ),
     );
   }
 

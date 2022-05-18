@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:test/page/function.dart';
+import 'package:test/page/list_menu.dart';
 import 'package:test/page/page_input.dart';
 
 class Home_page extends StatefulWidget {
@@ -99,16 +100,18 @@ class _Home_pageState extends State<Home_page> {
       width: MediaQuery.of(context).size.width * 0.85,
       child: ElevatedButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+            backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
             foregroundColor: MaterialStateProperty.all<Color>(Colors.amber),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
             )),
         onPressed: () {
           print("push button");
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => List_menu()));
         },
         child: Text(
-          "Button",
+          "List menu",
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),
       ),
